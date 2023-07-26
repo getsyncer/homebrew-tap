@@ -5,20 +5,20 @@
 class Syncer < Formula
   desc ""
   homepage ""
-  version "1.6.0"
+  version "1.6.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/getsyncer/syncer/releases/download/v1.6.0/syncer_Darwin_arm64.tar.gz"
-      sha256 "8f220f012f2fd1d9957934c9f952be9014e02577b80eb13f2f9cbc5ce2b21210"
+    if Hardware::CPU.intel?
+      url "https://github.com/getsyncer/syncer/releases/download/v1.6.1/syncer_Darwin_x86_64.tar.gz"
+      sha256 "17da740ee90df62eeee7edbf88ee5f00f27eacd572c9f25a703916a3bcd7e009"
 
       def install
         bin.install "syncer"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/getsyncer/syncer/releases/download/v1.6.0/syncer_Darwin_x86_64.tar.gz"
-      sha256 "66743290b25452fa5e09284eaaefdf8702e56b95fcbbed5507ff188ebf79407e"
+    if Hardware::CPU.arm?
+      url "https://github.com/getsyncer/syncer/releases/download/v1.6.1/syncer_Darwin_arm64.tar.gz"
+      sha256 "beb0a83cc8f4606a33085b908d43bc0703656e072b284c5887bf05635e95c39c"
 
       def install
         bin.install "syncer"
@@ -28,16 +28,16 @@ class Syncer < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/getsyncer/syncer/releases/download/v1.6.0/syncer_Linux_x86_64.tar.gz"
-      sha256 "7f5fe7fef0ba99ff14f1f3d25a200ba2ba868bab104589d2e443691d5e11e1f1"
+      url "https://github.com/getsyncer/syncer/releases/download/v1.6.1/syncer_Linux_x86_64.tar.gz"
+      sha256 "9bbc2f7b7efd54ce3bddd81f2aac9ef0572fc55942965bdcc0bddcb4cb3e00c6"
 
       def install
         bin.install "syncer"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getsyncer/syncer/releases/download/v1.6.0/syncer_Linux_arm64.tar.gz"
-      sha256 "e8e34c67eefec10f752a6811284d2104cb0aa224bbcffbd465a23d4cc1998e76"
+      url "https://github.com/getsyncer/syncer/releases/download/v1.6.1/syncer_Linux_arm64.tar.gz"
+      sha256 "7a0309848c602247228538778b903e0c8de3cddf831700e1f6b45ff9525c2c4e"
 
       def install
         bin.install "syncer"
