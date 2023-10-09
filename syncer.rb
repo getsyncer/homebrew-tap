@@ -5,20 +5,20 @@
 class Syncer < Formula
   desc ""
   homepage ""
-  version "1.9.0"
+  version "1.10.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/getsyncer/syncer/releases/download/v1.9.0/syncer_Darwin_x86_64.tar.gz"
-      sha256 "8a003451b69056bd774f46b7b3ef9ff019000bd1794c51545973a23cbeaa30eb"
+      url "https://github.com/getsyncer/syncer/releases/download/v1.10.0/syncer_Darwin_x86_64.tar.gz"
+      sha256 "80aa29d9dcf61ae2cce1075f03198c3e8b8eadc9a3dab5ef16c29df12fa6a2c4"
 
       def install
         bin.install "syncer"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/getsyncer/syncer/releases/download/v1.9.0/syncer_Darwin_arm64.tar.gz"
-      sha256 "fc9cf49fc36dde64b8cfe3f9095ede312b9f7baf42fa0ae65b868498d90899ac"
+      url "https://github.com/getsyncer/syncer/releases/download/v1.10.0/syncer_Darwin_arm64.tar.gz"
+      sha256 "fca01f3522c244acbdd7b648cc604b933b33bce177a56831655e775ed5db829e"
 
       def install
         bin.install "syncer"
@@ -28,16 +28,16 @@ class Syncer < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getsyncer/syncer/releases/download/v1.9.0/syncer_Linux_arm64.tar.gz"
-      sha256 "300f570e4e90911be102ce1c264e6a3839c5169bf3912bc985ba48b5ad5949c8"
+      url "https://github.com/getsyncer/syncer/releases/download/v1.10.0/syncer_Linux_arm64.tar.gz"
+      sha256 "66aa761ef9615ca39d466c169989a278f4615fc56e48037e2623e3e70c08efb4"
 
       def install
         bin.install "syncer"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/getsyncer/syncer/releases/download/v1.9.0/syncer_Linux_x86_64.tar.gz"
-      sha256 "66b70909be351151caaf8aced56bac0ef1ef9643ca9207f3778464bb5d2c7151"
+      url "https://github.com/getsyncer/syncer/releases/download/v1.10.0/syncer_Linux_x86_64.tar.gz"
+      sha256 "26f88520459d0a304108b24c11327050806b46ac3a64801a025f107e51c3cbda"
 
       def install
         bin.install "syncer"
