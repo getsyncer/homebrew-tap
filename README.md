@@ -2,6 +2,14 @@
 
 Homebrew Formulae to @syncer binaries, powered by @goreleaser
 
+## Install
+
 ```sh
 brew install getsyncer/tap/syncer
+```
+
+# Update
+
+```sh
+brew update && brew upgrade getsyncer/tap/syncer
 ```
