@@ -5,20 +5,20 @@
 class Syncer < Formula
   desc ""
   homepage ""
-  version "1.18.0"
+  version "1.18.1"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/getsyncer/syncer/releases/download/v1.18.0/syncer_Darwin_arm64.tar.gz"
-      sha256 "beb3d2d9758871f2da392996bf35ace1f1c3e33be635084e5cdaaf6870a6cd2e"
+    if Hardware::CPU.intel?
+      url "https://github.com/getsyncer/syncer/releases/download/v1.18.1/syncer_Darwin_x86_64.tar.gz"
+      sha256 "7b415ee1a865ebe1e086c77c112a3f7e402b6e6a4020b62142f1174ab491048a"
 
       def install
         bin.install "syncer"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/getsyncer/syncer/releases/download/v1.18.0/syncer_Darwin_x86_64.tar.gz"
-      sha256 "fdc2d3fd3b8d13a376285ff22577dc242e76532dfa0057fadebe6825411c2eaa"
+    if Hardware::CPU.arm?
+      url "https://github.com/getsyncer/syncer/releases/download/v1.18.1/syncer_Darwin_arm64.tar.gz"
+      sha256 "6af7da4abab9b3974c61d4bc8304611ba30e752c1576087ecce9482099d1b506"
 
       def install
         bin.install "syncer"
@@ -27,17 +27,17 @@ class Syncer < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/getsyncer/syncer/releases/download/v1.18.0/syncer_Linux_x86_64.tar.gz"
-      sha256 "9777b0f97fb4680d369346671fa5e8826c8a56f4acc84c67c96537397fab376a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/getsyncer/syncer/releases/download/v1.18.1/syncer_Linux_arm64.tar.gz"
+      sha256 "d66c99e255297f659f08694431df5706475f239e7f39d078602fb2e2b4177892"
 
       def install
         bin.install "syncer"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/getsyncer/syncer/releases/download/v1.18.0/syncer_Linux_arm64.tar.gz"
-      sha256 "203acc9ea6e9fdf9def64fe60929e3f5bef6bff9dc68214ec6e688d26edc4038"
+    if Hardware::CPU.intel?
+      url "https://github.com/getsyncer/syncer/releases/download/v1.18.1/syncer_Linux_x86_64.tar.gz"
+      sha256 "0dbc0c8f447a54768a41761882ed371fbe0cf06d16977d55fef201f9fc1ff201"
 
       def install
         bin.install "syncer"
